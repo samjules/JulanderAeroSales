@@ -9,7 +9,7 @@ const schema = a.schema({
     Agent: a.string(),
     Price: a.string(),
     CoverPhoto: a.url(),
-  }).authorization(allow => [allow.guest()])
+  }).authorization(allow => [allow.publicApiKey()])
 });
 
 export type Schema = ClientSchema<typeof schema>;
